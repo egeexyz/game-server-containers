@@ -10,3 +10,9 @@
 [submodule "gsc-tf2"]
 	path = gsc-tf2
 	url = https://github.com/Egeeio/gsc-tf2
+[submodule "gsc-minecraft"]
+	path = gsc-minecraft
+	url = https://github.com/Egeeio/gsc-minecraft
+[submodule "gsc-minecraft-modded"]
+	path = gsc-minecraft-modded
+	url = https://github.com/Egeeio/gsc-minecraft-modded
