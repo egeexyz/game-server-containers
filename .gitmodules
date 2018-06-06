@@ -1,0 +1,12 @@
+[submodule "gsc-gmod"]
+	path = gsc-gmod
+	url = https://github.com/Egeeio/gsc-gmod
+[submodule "gsc-rust"]
+	path = gsc-rust
+	url = https://github.com/Egeeio/gsc-rust
+[submodule "gsc-terraria"]
+	path = gsc-terraria
+	url = https://github.com/Egeeio/gsc-terraria
+[submodule "gsc-tf2"]
+	path = gsc-tf2
+	url = https://github.com/Egeeio/gsc-tf2
