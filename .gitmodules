@@ -16,3 +16,6 @@
 [submodule "gsc-minecraft-modded"]
 	path = gsc-minecraft-modded
 	url = https://github.com/Egeeio/gsc-minecraft-modded
+[submodule "gsc-AoS"]
+	path = gsc-AoS
+	url = https://github.com/Egeeio/gsc-AoS
