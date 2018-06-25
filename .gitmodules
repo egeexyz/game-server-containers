@@ -19,3 +19,6 @@
 [submodule "gsc-AoS"]
 	path = gsc-AoS
 	url = https://github.com/Egeeio/gsc-AoS
+[submodule "gsc-starbound"]
+	path = gsc-starbound
+	url = https://github.com/Egeeio/gsc-starbound
