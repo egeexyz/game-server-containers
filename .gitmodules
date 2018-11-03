@@ -22,3 +22,6 @@
 [submodule "gsc-starbound"]
 	path = gsc-starbound
 	url = https://github.com/Egeeio/gsc-starbound
+[submodule "gsc-7days"]
+	path = gsc-7days
+	url = https://github.com/Egeeio/gsc-7days
