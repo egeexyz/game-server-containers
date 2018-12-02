@@ -1,0 +1,10 @@
+maxplayers=8
+autocreate=1
+world=/home/gsc/server_files/worlds/gsc.wld
+worldname=MyWorld
+worldpath=/home/gsc/server_files/worlds
+port=7777
+password=password
+motd=fuckya
+difficulty=0
+secure=1
