@@ -1,0 +1,23 @@
+- hosts: all
+  gather_facts: false
+  pre_tasks:
+    - raw: test -e /usr/bin/python || (apt-get update && apt-get install -y python-minimal python-apt)
+    - setup:
+  roles:
+    - gsc-user
+    - gsc-steamcmd
+  tasks:
+    - name: Add run.sh to image
+      copy:
+        mode: "+x"
+        src: ./files/run.sh
+        dest: /usr/bin/run
+    - name: Add update.sh to image
+      copy:
+        mode: "+x"
+        src: ./files/update.sh
+        dest: /usr/bin/update
+    - name: Clean up apt
+      apt:
+        autoclean: yes
+        autoremove: yes
