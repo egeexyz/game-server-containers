@@ -17,7 +17,7 @@
     [
       {
         "type": "docker-tag",
-        "repository": "egeeio/7days",
+        "repository": "egeeio/steamcmd",
         "tag": "latest"
       },
       "docker-push"
