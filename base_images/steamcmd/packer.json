@@ -1,0 +1,26 @@
+{
+  "builders": [
+    {
+      "type": "docker",
+      "image": "ubuntu:xenial",
+      "commit": true
+    }
+  ],
+
+  "provisioners": [
+    {
+      "type": "ansible",
+      "playbook_file": "main.yml"
+    }
+  ],
+  "post-processors": [
+    [
+      {
+        "type": "docker-tag",
+        "repository": "egeeio/steamcmd",
+        "tag": "latest"
+      },
+      "docker-push"
+    ]
+  ]
+}

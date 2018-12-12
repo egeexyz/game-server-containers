@@ -1,0 +1,15 @@
+version: "2.3"
+services:
+  terraria-server:
+    volumes:
+      - type: bind
+        source: ./server_files/
+        target: /home/gsc/server_files
+    stdin_open: true
+    tty: true
+    build:
+      context: .
+      args:
+        uid: ${uid}
+    ports:
+      - "7777:7777"
