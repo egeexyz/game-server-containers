@@ -1,6 +1,6 @@
 #!/bin/bash
 WORK_DIR="/home/gsc/server_files"
-if [ -d "$WORK_DIR/srcds_run" ]; then
+if [ ! -f "$WORK_DIR/startserver.sh" ]; then
   echo "Game doesn't appear to be installed. Beginning install, please wait..."
   /usr/bin/update
   echo "Install complete. Launching server now..."
