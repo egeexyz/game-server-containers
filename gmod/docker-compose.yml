@@ -1,0 +1,15 @@
+version: "2.3"
+services:
+  gmod-server:
+    volumes:
+      - type: bind
+        source: ./server_files/
+        target: /home/gsc/server_files
+    mem_reservation: 2048m
+    build:
+      context: .
+      args:
+        uid: ${uid}
+    ports:
+      - "27016:27015/udp"
+      - "27006:27005/udp"
