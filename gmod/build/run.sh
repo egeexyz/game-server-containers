@@ -1,8 +1,10 @@
 #!/bin/bash
 WORK_DIR="/home/gsc/server_files"
-if [ ! -f "$WORK_DIR/startserver.sh" ]; then
+if [ ! -f "$WORK_DIR/srcds_run" ]; then
   echo "Game doesn't appear to be installed. Beginning install, please wait..."
   /usr/bin/update
+  mkdir $WORK_DIR/garrysmod
+  touch $WORK_DIR/garrysmod/console.log
   echo "Install complete. Launching server now..."
 fi
 $WORK_DIR/srcds_run \
@@ -12,5 +14,4 @@ $WORK_DIR/srcds_run \
   +map gm_construct \
   +host_workshop_collection 776121544 \
   -condebug &
-sleep 15
 tail -f $WORK_DIR/garrysmod/console.log
