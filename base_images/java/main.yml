@@ -12,6 +12,7 @@
         update_cache: yes
       with_items:
         - "git"
+        - "wget"
     - name: Clean up apt
       apt:
         autoclean: yes
