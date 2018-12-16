@@ -4,9 +4,30 @@
     - raw: test -e /usr/bin/python || (apt-get update && apt-get install -y python-minimal python-apt)
     - setup:
   roles:
-    - gsc-user
-    - gsc-steamcmd
+    - gsc-user #https://github.com/Egeeio/gsc-user
   tasks:
+    - name: Add i386 arch
+      shell: dpkg --add-architecture i386
+    - name: Accept Steam license
+      shell: echo steam steam/question select "I AGREE" | debconf-set-selections
+    - shell: echo steam steam/license note '' | debconf-set-selections
+    - name: Install steamcmd and deps
+      apt:
+        state: present
+        name: "{{ item }}"
+        update_cache: yes
+        force_apt_get: yes
+      with_items:
+        - steamcmd
+        - ca-certificates
+        - libcurl3-gnutls:i386
+        - libncurses5:i386
+        - libtinfo5:i386
+    - name: Symlink steamcmd
+      file:
+        src: /usr/games/steamcmd
+        dest: /usr/bin/steamcmd
+        state: link
     - name: Clean up apt
       apt:
         autoclean: yes
