@@ -1,5 +1,6 @@
 #!/bin/bash
-cd /home/gsc/server_files
+WORK_DIR="/home/gsc/server_files"
+
+cd $WORK_DIR
 wget "https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar"
-which git
-java -jar BuildTools.jar --rev 1.13
+java -jar $WORK_DIR/BuildTools.jar --rev 1.13.1
