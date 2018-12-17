@@ -1,0 +1,16 @@
+version: "2.3"
+services:
+  starbound-server:
+    volumes:
+      - type: bind
+        source: ./server_files/
+        target: /home/gsc/server_files
+      - type: bind
+        source: ./post_build/
+        target: /home/gsc/post_build
+    build:
+      context: .
+      args:
+        uid: ${uid}
+    ports:
+      - "21025:21025/tcp"
