@@ -1,4 +1,8 @@
 #!/bin/sh
+
+# This startserver.sh file is the same as the one that comes with 7dtd
+# except that this one logs to console.log instead of a generated log file.
+
 cd "`dirname "$0"`"
 
 PARAMS=$@
