@@ -12,7 +12,7 @@ You will need the following things properly installed to deploy a game server:
 - [Git](https://git-scm.com/)
 - [Docker](https://docs.docker.com/get-started/#prepare-your-docker-environment) (Community Edition is fine)
 - [Docker Compose](https://docs.docker.com/compose/install/)
-- Bash (Optimal. WSL is fine.)
+- Bash (Optional, WSL is fine.)
 
 ## Running / Development
 
