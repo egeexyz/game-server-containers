@@ -1,0 +1,14 @@
+sudo: required
+services:
+  - docker
+before_script:
+  - docker pull redcoolbeans/dockerlint
+  - curl -L https://github.com/docker/compose/releases/download/1.18.0/docker-compose-`uname -s`-`uname -m` -o docker-compose
+  - chmod +x docker-compose
+script:
+  - docker run -it --rm -v "$TRAVIS_BUILD_DIR/Dockerfile":/Dockerfile:ro redcoolbeans/dockerlint
+  - ./docker-compose config
+  - if [ $TRAVIS_BRANCH == 'stable' ];
+    then ./docker-compose build;
+    else echo branch != stable, skipping build...;
+    fi

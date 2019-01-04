@@ -3,15 +3,17 @@ services:
   rust-server:
     volumes:
       - type: bind
-        source: ./server_files/
-        target: /home/gsc/server_files
-    mem_reservation: 2048m
+        source: ./rust/
+        target: /opt/rustserver/server/rust
+      - type: bind
+        source: ./rust/server.log
+        target: /opt/rustserver/server.log
+    # cpuset: 0-1
+    mem_reservation: 3000m
     build:
       context: .
-      args:
-        uid: ${uid}
     env_file:
       - vars.env
     ports:
-      - "28015:28015/udp"
-      - "28016:28016"
+    - "28015:28015/udp"
+    - "28016:28016"

@@ -1,0 +1,7 @@
+*.map
+*.sav
+*.txt
+*.db
+rust/storage/*
+rust/user*
+server.log
