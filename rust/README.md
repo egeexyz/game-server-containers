@@ -1,9 +1,14 @@
 # gsc-rust - Game Server Container for Rust
+
 <a href="www.egee.io"><img src="https://i.imgur.com/Mvjrkqo.png" alt="Rust on Docker" width="300" /></a>
 
-[![Build Status](https://travis-ci.org/egee-irl/gsc-rust.svg?branch=unstable)](https://travis-ci.org/egee-irl/gsc-rust)
-[![Chat / Support](https://img.shields.io/badge/Chat%20%2F%20Support-discord-7289DA.svg?style=flat)](https://discord.gg/42PMX5N)
-[![GitHub license](https://img.shields.io/badge/license-GPLv3-blue.svg?style=flat)](https://github.com/egee-irl/gsc-rust/blob/stable/LICENSE)
+## This container is totally different than the others
+
+Yep, that's because Rust is surprisingly difficult to run inside a container. The Linux Rust Dedicated server requires dependencies that the gsc base images do not have. And since the Rust Dedicated server is very poorly documented, figuring out what the dependencies are is extremely time consuming.
+
+This container follows a very _old_ pattern from the early days of gsc. It's dirty but it works and that's why we use it.
+
+You can find the _old_ gsc documentation below 👇
 
 Host your very own dedicated Rust server with one command:
 
