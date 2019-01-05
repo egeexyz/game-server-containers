@@ -7,6 +7,9 @@ services:
         target: /home/gsc/server_files
     stdin_open: true
     tty: true
+    # mem_reservation: 1024m
+    # cpu_shares: 1024
+    # cpus: 1
     build:
       context: .
       args:

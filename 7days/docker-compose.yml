@@ -8,7 +8,9 @@ services:
       - type: bind
         source: ./post_build/
         target: /home/gsc/post_build
-    mem_reservation: 1024m
+    # mem_reservation: 1024m
+    # cpu_shares: 1024
+    # cpus: 1
     build:
       context: .
       args:
