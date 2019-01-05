@@ -13,6 +13,9 @@ You will need the following things properly installed to deploy a game server:
 - [Docker](https://docs.docker.com/get-started/#prepare-your-docker-environment) (Community Edition is fine)
 - [Docker Compose](https://docs.docker.com/compose/install/)
 - Bash (Optional, WSL is fine.)
+- Add `export uid=${UID}` to the end of your ~/.bashrc
+
+The `uid=${UID}` environment variable is required because if the user that _creates_ the container has a different uid than the gsc user _inside_ the container, permission issues may occur within the `server_files` folder.
 
 ## Running / Development
 
