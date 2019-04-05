@@ -3,7 +3,9 @@
 [![Chat / Support](https://img.shields.io/badge/Chat%20%2F%20Support-discord-7289DA.svg?style=flat)](https://discord.gg/EMbcgR8)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/Egeeio/game-server-containers/blob/master/LICENSE)
 
-The goal of this project is to containerize game servers so that they are easy to deploy, run, and manage.
+**Note** This project has been deprecated, replaced by [gsd-cli](https://github.com/Egeeio/gsd-cli).
+
+The goal of this project **was** to containerize game servers so that they are easy to deploy, run, and manage.
 
 ## Prerequisites
 
